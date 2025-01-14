@@ -18,8 +18,10 @@ const Task = ({ task, onToggle, onDelete }) => {
         justifyContent: 'space-between',
         marginBottom: '10px',
         padding: '10px',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#fff',
         maxWidth: '300px', // Added to make the task list narrower
         margin: '0 auto' // Center the component
       }}
@@ -30,6 +32,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         style={{
           textDecoration: task.completed ? 'line-through' : 'none',
           cursor: 'pointer',
+          flex: 1,
         }}
       >
         {task.name}
@@ -37,7 +40,7 @@ const Task = ({ task, onToggle, onDelete }) => {
       <button 
         // Delete button styles and click handler
         onClick={() => onDelete(task.id)} 
-        style={{ marginLeft: '10px' }}
+        style={{ marginLeft: '10px', color: '#ff4d4d', border: 'none', background: 'none', cursor: 'pointer' }}
       >
         Delete
       </button>
