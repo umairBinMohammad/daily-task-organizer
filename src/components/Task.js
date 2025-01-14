@@ -17,6 +17,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         alignItems: 'center',
         justifyContent: 'space-between',
         marginBottom: '10px',
+        marginTop: '5px',
         padding: '10px',
         border: '1px solid #ddd',
         borderRadius: '8px',
@@ -32,7 +33,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         style={{
           textDecoration: task.completed ? 'line-through' : 'none',
           cursor: 'pointer',
-          flex: 1,
+          flex: 1
         }}
       >
         {task.name}
