@@ -20,6 +20,8 @@ const Task = ({ task, onToggle, onDelete }) => {
         padding: '10px',
         border: '1px solid #ccc',
         borderRadius: '5px',
+        maxWidth: '300px', // Added to make the task list narrower
+        margin: '0 auto' // Center the component
       }}
     >
       <div

@@ -18,16 +18,20 @@ const App = () => {
   const deleteTask = useTaskStore((state) => state.deleteTask);
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-      <h1>Daily Task Organizer</h1>
+    <div className="p-4 max-w-md mx-auto bg-gray-100 min-h-screen" style={{ maxWidth: '300px', margin: '0 auto' }}>
+      <h1 className="text-xl font-bold text-center mb-4">Daily Task Organizer</h1>
       {/* Component to add a new task */}
-      <AddTask onAdd={addTask} />
+      <div className="mb-4">
+        <AddTask onAdd={addTask} />
+      </div>
       {/* Component to list all tasks */}
-      <TaskList
-        tasks={tasks}
-        onToggle={toggleTaskCompletion}
-        onDelete={deleteTask}
-      />
+      <div className="mt-4">
+        <TaskList
+          tasks={tasks}
+          onToggle={toggleTaskCompletion}
+          onDelete={deleteTask}
+        />
+      </div>
     </div>
   );
 };

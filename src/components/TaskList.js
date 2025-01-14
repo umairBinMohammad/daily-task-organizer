@@ -9,18 +9,18 @@ import Task from './Task';
  * @param {Function} onDelete - Function to delete a task.
  */
 const TaskList = ({ tasks, onToggle, onDelete }) => {
-  return (
-    <div>
-      {tasks.map((task) => (
-        <Task
-          key={task.id}
-          task={task}
-          onToggle={onToggle}
-          onDelete={onDelete}
-        />
-      ))}
-    </div>
-  );
+    return (
+        <div className="space-y-2" style={{ maxWidth: '300px', margin: '0 auto' }}>
+          {tasks.map((task) => (
+            <Task
+              key={task.id}
+              task={task}
+              onToggle={onToggle}
+              onDelete={onDelete}
+            />
+          ))}
+        </div>
+      );
 };
 
 export default TaskList;

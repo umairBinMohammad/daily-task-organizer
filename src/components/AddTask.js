@@ -21,20 +21,19 @@ const AddTask = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+    <form onSubmit={handleSubmit} className="flex items-center gap-2 mb-4" style={{ maxWidth: '300px', margin: '0 auto' }}>
       <input
         type="text"
-        placeholder="Add a new task..."
+        placeholder="Add a new task"
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
-        style={{
-          padding: '10px',
-          width: '70%',
-          marginRight: '10px',
-        }}
+        className="flex-1 px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-      <button type="submit" style={{ padding: '10px 20px' }}>
-        Add Task
+      <button
+        type="submit"
+        className="px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
+      >
+        Add
       </button>
     </form>
   );
