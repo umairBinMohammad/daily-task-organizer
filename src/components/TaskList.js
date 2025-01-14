@@ -10,7 +10,7 @@ import Task from './Task';
  */
 const TaskList = ({ tasks, onToggle, onDelete }) => {
     return (
-        <div className="space-y-2" style={{ maxWidth: '300px', margin: '0 auto' }}>
+        <div className="space-y-2" style={{ maxWidth: '80%', margin: '0 auto' }}>
           {tasks.map((task) => (
             <Task
               key={task.id}
