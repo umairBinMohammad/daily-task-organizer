@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TaskList from './components/TaskList';
 import AddTask from './components/AddTask';
+import useTaskStore from './store/taskStore';
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-
-  const addTask = (taskName) => {
-    setTasks([...tasks, { id: Date.now(), name: taskName, completed: false }]);
-  };
-
-  const toggleTaskCompletion = (taskId) => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === taskId ? { ...task, completed: !task.completed } : task
-      )
-    );
-  };
-
-  const deleteTask = (taskId) => {
-    setTasks(tasks.filter((task) => task.id !== taskId));
-  };
+  const tasks = useTaskStore((state) => state.tasks);
+  const addTask = useTaskStore((state) => state.addTask);
+  const toggleTaskCompletion = useTaskStore((state) => state.toggleTaskCompletion);
+  const deleteTask = useTaskStore((state) => state.deleteTask);
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
