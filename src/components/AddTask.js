@@ -21,21 +21,72 @@ const AddTask = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2 mb-4 w-4/5 mx-auto">
-      <input
-        type="text"
-        placeholder="Add a new task"
-        value={taskName}
-        onChange={(e) => setTaskName(e.target.value)}
-        className="flex-1 px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
-      <button
-        type="submit"
-        className="px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
-      >
-        Add
-      </button>
-    </form>
+    <div
+      // Wrapper styles for the form container
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '20px',
+        maxWidth: '80%',
+        margin: '0 auto',
+      }}
+    >
+      <form onSubmit={handleSubmit} style={{ width: '70%', display: 'flex', alignItems: 'center' }}>
+        <div
+          // Input container styles
+          style={{
+            display: 'flex',
+            flex: 1,
+            border: '1px solid #ddd',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            padding: '0 10px',
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Add a new task"
+            value={taskName}
+            onChange={(e) => setTaskName(e.target.value)}
+            style={{
+              border: 'none',
+              outline: 'none',
+              flex: 1,
+              padding: '10px',
+              fontSize: '16px',
+            }}
+          />
+        </div>
+        <div
+          // Button container styles
+          style={{
+            marginLeft: '10px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#007BFF',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            padding: '6px 12px',
+            color: '#fff',
+          }}
+        >
+          <button
+            type="submit"
+            style={{
+              border: 'none',
+              background: 'none',
+              color: 'inherit',
+              fontSize: '16px',
+              cursor: 'pointer',
+            }}
+          >
+            Add
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
