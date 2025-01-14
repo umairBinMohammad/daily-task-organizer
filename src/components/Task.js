@@ -17,7 +17,6 @@ const Task = ({ task, onToggle, onDelete }) => {
         alignItems: 'center',
         justifyContent: 'space-between',
         marginBottom: '10px',
-        marginTop: '5px',
         padding: '10px',
         border: '1px solid #ddd',
         borderRadius: '8px',
