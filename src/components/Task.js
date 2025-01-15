@@ -56,7 +56,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         onClick={() => onDelete(task.id)} 
         style={{ marginLeft: '10px', color: '#ff4d4d', border: 'none', background: 'none', cursor: 'pointer' }}
       >
-        Delete
+        Abandon Quest
       </button>
     </div>
   );
