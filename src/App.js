@@ -12,6 +12,7 @@ const App = () => {
   const addTask = useTaskStore((state) => state.addTask);
   const toggleTaskCompletion = useTaskStore((state) => state.toggleTaskCompletion);
   const deleteTask = useTaskStore((state) => state.deleteTask);
+  const clearTasks = useTaskStore((state) => state.clearTasks);
   
   // // Clear the tasks from the store
   // const currentState = useTaskStore.getState();
@@ -34,6 +35,22 @@ const App = () => {
       {/* Component to add a new task */}
       <div className="mb-4" style={{ marginBottom: '1rem', marginTop: '1rem' }}>
         <AddTask onAdd={addTask} />
+      </div>
+      {/* Button to clear all tasks */}
+      <div className="mb-4" style={{ textAlign: 'center' }}>
+        <button
+          onClick={clearTasks}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#ff4d4d',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+          }}
+        >
+          Clear All Tasks
+        </button>
       </div>
       {/* Component to list all tasks */}
       <div className="mt-4" style={{ marginTop: '1rem', marginBottom: '1rem' }}>

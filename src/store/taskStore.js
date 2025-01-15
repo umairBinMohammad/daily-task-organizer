@@ -32,6 +32,9 @@ const useTaskStore = create(
         set((state) => ({
           tasks: state.tasks.filter((task) => task.id !== taskId),
         })),
+      
+      // Clear all tasks from the store
+      clearTasks: () => set({ tasks: [] }),
     }),
     {
       name: 'task-storage', // Name of the key in LocalStorage
