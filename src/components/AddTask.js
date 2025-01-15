@@ -14,30 +14,17 @@ const AddTask = ({ onAdd }) => {
   
     return (
         <>
-          <div
-            // Button container styles
-            style={{
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: '#007BFF',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              padding: '6px 12px',
-              color: '#fff',
-              width: '20%',
-            }}
-          >
+          <div className="mb-4" style={{ textAlign: 'center' }}>
             <button
               onClick={() => setShowModal(true)}
               style={{
+                padding: '10px 20px',
+                backgroundColor: '#007BFF',
+                color: '#fff',
                 border: 'none',
-                background: 'none',
-                color: 'inherit',
-                fontSize: '16px',
+                borderRadius: '8px',
                 cursor: 'pointer',
+                width: '20%',
               }}
             >
               Add Task
