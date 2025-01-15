@@ -31,7 +31,7 @@ const App = () => {
         backgroundColor: '#fff',
       }}
     >
-      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center' }}>Daily Task Organizer</h1>
+      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center' }}>Daily Quest Log</h1>
       {/* Component to add a new task */}
       <div className="mb-4" style={{ marginBottom: '1rem', marginTop: '1rem' }}>
         <AddTask onAdd={addTask} />
@@ -49,7 +49,7 @@ const App = () => {
             cursor: 'pointer',
           }}
         >
-          Clear All Tasks
+          Turn in all Quests
         </button>
       </div>
       {/* Component to list all tasks */}

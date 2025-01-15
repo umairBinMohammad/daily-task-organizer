@@ -5,10 +5,10 @@ import { persist } from 'zustand/middleware';
 const useTaskStore = create(
   persist(
     (set) => ({
-      // Initial state: an empty array of tasks
+      // Initial state: an empty array of quests
       tasks: [],
       
-      // Add a new task to the store
+      // Add a new quest to the store
       addTask: (taskData) =>
         set((state) => ({
           tasks: [
@@ -23,7 +23,7 @@ const useTaskStore = create(
           ],
         })),
       
-      // Toggle the completion status of a task
+      // Toggle the completion status of a quest
       toggleTaskCompletion: (taskId) =>
         set((state) => ({
           tasks: state.tasks.map((task) =>
@@ -33,13 +33,13 @@ const useTaskStore = create(
           ),
         })),
       
-      // Delete a task from the store
+      // Delete a quest from the store
       deleteTask: (taskId) =>
         set((state) => ({
           tasks: state.tasks.filter((task) => task.id !== taskId),
         })),
       
-      // Clear all tasks from the store
+      // Clear all quests from the store
       clearTasks: () => set({ tasks: [] }),
     }),
     {

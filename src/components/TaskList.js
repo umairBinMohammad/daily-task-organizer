@@ -2,11 +2,11 @@ import React from 'react';
 import Task from './Task';
 
 /**
- * TaskList component renders a list of tasks.
+ * TaskList component renders a list of quests.
  * 
- * @param {Object[]} tasks - Each task has title, description, priority, dueDate, etc.
- * @param {Function} onToggle - Function to toggle the completion status of a task.
- * @param {Function} onDelete - Function to delete a task.
+ * @param {Object[]} tasks - Each quest has title, description, priority, dueDate, etc.
+ * @param {Function} onToggle - Function to toggle the completion status of a quest.
+ * @param {Function} onDelete - Function to delete a quest.
  */
 const TaskList = ({ tasks, onToggle, onDelete }) => {
     return (

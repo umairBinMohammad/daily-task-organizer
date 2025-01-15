@@ -27,7 +27,7 @@ const AddTask = ({ onAdd }) => {
                 width: '20%',
               }}
             >
-              Add Task
+              Start Quest
             </button>
           </div>
       

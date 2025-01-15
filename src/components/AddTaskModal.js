@@ -36,9 +36,9 @@ const AddTaskModal = ({ onAdd, onClose }) => {
           minWidth: '300px',
         }}
       >
-        <h2>Add New Task</h2>
+        <h2>Add New Quest</h2>
         <div style={{ marginBottom: '10px' }}>
-          <label>Title:</label>
+          <label>Quest Name:</label>
           <input
             type="text"
             value={title}
@@ -47,7 +47,7 @@ const AddTaskModal = ({ onAdd, onClose }) => {
           />
         </div>
         <div style={{ marginBottom: '10px' }}>
-          <label>Description:</label>
+          <label>Backstory:</label>
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -55,7 +55,7 @@ const AddTaskModal = ({ onAdd, onClose }) => {
           />
         </div>
         <div style={{ marginBottom: '10px' }}>
-          <label>Priority:</label>
+          <label>Difficulty:</label>
           <input
             type="text"
             value={priority}
@@ -63,7 +63,7 @@ const AddTaskModal = ({ onAdd, onClose }) => {
             style={{ width: '100%' }}
           />
         </div>
-        <button type="submit">Add Task</button>
+        <button type="submit">Add Quest</button>
         <button type="button" onClick={onClose} style={{ marginLeft: '10px' }}>Cancel</button>
       </form>
     </div>
