@@ -4,7 +4,7 @@ import React from 'react';
  * Task component represents a single task item.
  * 
  * @param {Object} props - The properties object.
- * @param {Object} props.task - The task object containing id, name, and completed status.
+ * @param {Object} props.task - The task object containing id, title, description, priority, dueDate, and completed status.
  * @param {Function} props.onToggle - Function to toggle the completed status of the task.
  * @param {Function} props.onDelete - Function to delete the task.
  */
@@ -26,8 +26,15 @@ const Task = ({ task, onToggle, onDelete }) => {
         margin: '0 auto' // Center the component
       }}
     >
+      <div style={{ marginRight: '8px' }}>
+        <input
+          type="checkbox"
+          checked={task.completed}
+          onChange={() => onToggle(task.id)}
+        />
+      </div>
       <div
-        // Task name styles and click handler
+        // Task title styles and click handler
         onClick={() => onToggle(task.id)}
         style={{
           textDecoration: task.completed ? 'line-through' : 'none',
@@ -35,7 +42,10 @@ const Task = ({ task, onToggle, onDelete }) => {
           flex: 1
         }}
       >
-        {task.name}
+        {task.title}
+      </div>
+      <div style={{ fontSize: '0.9em', color: '#555' }}>
+        {task.description} | Priority: {task.priority} | Due: {task.dueDate}
       </div>
       <button 
         // Delete button styles and click handler

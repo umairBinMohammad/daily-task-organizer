@@ -9,8 +9,7 @@ const AddTask = ({ onAdd }) => {
     const [showModal, setShowModal] = useState(false);
   
     const handleAdd = (taskData) => {
-      onAdd(taskData.title); // Adjust store logic to handle more fields
-      // or modify your store to handle complete "taskData" object
+      onAdd(taskData);
     };
   
     return (

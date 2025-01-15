@@ -4,7 +4,7 @@ import Task from './Task';
 /**
  * TaskList component renders a list of tasks.
  * 
- * @param {Object[]} tasks - Array of task objects to be displayed.
+ * @param {Object[]} tasks - Each task has title, description, priority, dueDate, etc.
  * @param {Function} onToggle - Function to toggle the completion status of a task.
  * @param {Function} onDelete - Function to delete a task.
  */

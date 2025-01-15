@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 const AddTaskModal = ({ onAdd, onClose }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [priority, setPriority] = useState('');
+  const [dueDate, setDueDate] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim()) {
-      onAdd({ title, description });
+      onAdd({ title, description, priority, dueDate });
       onClose();
     }
   };
@@ -50,6 +52,24 @@ const AddTaskModal = ({ onAdd, onClose }) => {
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            style={{ width: '100%' }}
+          />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Priority:</label>
+          <input
+            type="text"
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
+            style={{ width: '100%' }}
+          />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Due Date:</label>
+          <input
+            type="date"
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
             style={{ width: '100%' }}
           />
         </div>

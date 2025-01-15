@@ -9,11 +9,18 @@ const useTaskStore = create(
       tasks: [],
       
       // Add a new task to the store
-      addTask: (taskName) =>
+      addTask: (taskData) =>
         set((state) => ({
           tasks: [
             ...state.tasks,
-            { id: Date.now(), name: taskName, completed: false },
+            {
+              id: Date.now(),
+              name: taskData.title, // or rename to title?
+              description: taskData.description,
+              priority: taskData.priority,
+              dueDate: taskData.dueDate,
+              completed: false,
+            }
           ],
         })),
       
