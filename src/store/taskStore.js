@@ -15,7 +15,7 @@ const useTaskStore = create(
             ...state.tasks,
             {
               id: Date.now(),
-              name: taskData.title, // or rename to title?
+              title: taskData.title,
               description: taskData.description,
               priority: taskData.priority,
               dueDate: taskData.dueDate,
