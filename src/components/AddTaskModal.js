@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AddTaskModal = ({ onAdd, onClose }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState('');
+  const [priority, setPriority] = useState('Easy'); // Set default to 'Easy'
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,12 +56,15 @@ const AddTaskModal = ({ onAdd, onClose }) => {
         </div>
         <div style={{ marginBottom: '10px' }}>
           <label>Difficulty:</label>
-          <input
-            type="text"
+          <select
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
             style={{ width: '100%' }}
-          />
+          >
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
         </div>
         <button type="submit">Add Quest</button>
         <button type="button" onClick={onClose} style={{ marginLeft: '10px' }}>Cancel</button>

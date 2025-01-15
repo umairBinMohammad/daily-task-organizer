@@ -37,15 +37,19 @@ const Task = ({ task, onToggle, onDelete }) => {
         // Quest name styles and click handler
         onClick={() => onToggle(task.id)}
         style={{
-          textDecoration: task.completed ? 'line-through' : 'none',
           cursor: 'pointer',
           flex: 1
         }}
       >
-        {task.title}
-      </div>
-      <div style={{ fontSize: '0.9em', color: '#555' }}>
-        {task.description} | Difficulty: {task.priority}
+        <div style={{ fontWeight: 'bold', textDecoration: task.completed ? 'line-through' : 'none' }}>
+          {task.title}
+        </div>
+        <div style={{ color: '#555' }}>
+          {task.description}
+        </div>
+        <div style={{ fontSize: '0.9em', color: '#777' }}>
+          Difficulty: {task.priority}
+        </div>
       </div>
       <button 
         // Delete button styles and click handler
