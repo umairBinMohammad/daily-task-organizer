@@ -12,6 +12,11 @@ const App = () => {
   const addTask = useTaskStore((state) => state.addTask);
   const toggleTaskCompletion = useTaskStore((state) => state.toggleTaskCompletion);
   const deleteTask = useTaskStore((state) => state.deleteTask);
+  
+  // // Clear the tasks from the store
+  // const currentState = useTaskStore.getState();
+  // console.log(currentState);
+  // useTaskStore.setState({ tasks: [] });
 
   return (
     <div
