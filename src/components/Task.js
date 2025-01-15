@@ -4,7 +4,7 @@ import React from 'react';
  * Task component represents a single task item.
  * 
  * @param {Object} props - The properties object.
- * @param {Object} props.task - The task object containing id, title, description, priority, dueDate, and completed status.
+ * @param {Object} props.task - The task object containing id, title, description, priority, and completed status.
  * @param {Function} props.onToggle - Function to toggle the completed status of the task.
  * @param {Function} props.onDelete - Function to delete the task.
  */
@@ -45,7 +45,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         {task.title}
       </div>
       <div style={{ fontSize: '0.9em', color: '#555' }}>
-        {task.description} | Priority: {task.priority} | Due: {task.dueDate}
+        {task.description} | Priority: {task.priority}
       </div>
       <button 
         // Delete button styles and click handler

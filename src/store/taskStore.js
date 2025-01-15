@@ -18,7 +18,6 @@ const useTaskStore = create(
               title: taskData.title,
               description: taskData.description,
               priority: taskData.priority,
-              dueDate: taskData.dueDate,
               completed: false,
             }
           ],
