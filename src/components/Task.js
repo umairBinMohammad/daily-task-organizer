@@ -21,7 +21,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         border: '1px solid #ddd',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        backgroundColor: '#faf3f7', // Changed to light pink
+        backgroundColor: '#faf3f7',
         maxWidth: '300px', // Added to make the task list narrower
         margin: '0 auto' // Center the component
       }}

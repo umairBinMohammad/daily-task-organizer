@@ -2,6 +2,7 @@ import React from 'react';
 import TaskList from './components/TaskList';
 import AddTask from './components/AddTask';
 import useTaskStore from './store/taskStore';
+import parchmentTexture from './assets/resources/parchment3.png';
 
 /**
  * The main App component that renders the Daily Task Organizer.
@@ -23,12 +24,15 @@ const App = () => {
     <div
       className="p-4 max-w-md mx-auto bg-gray-100 min-h-screen"
       style={{
-        maxWidth: '65%', // 90% of the viewport width
+        maxWidth: '40%', // 90% of the viewport width
         margin: '0 auto',
         padding: '2% 5% 5% 5%', // Lowered the top padding to 2%
         borderRadius: '0.5rem', // Use rem for consistent scaling
         boxShadow: '0 0.125rem 0.25rem rgba(0, 0, 0, 0.1)', // Converted to rem
         backgroundColor: '#fff',
+        backgroundImage: `url(${parchmentTexture})`, // Add background image
+        backgroundSize: 'cover', // Ensure the image covers the entire background
+        backgroundRepeat: 'no-repeat', // Prevent the image from repeating
       }}
     >
       <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center' }}>Daily Quest Log</h1>
