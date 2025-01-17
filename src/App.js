@@ -3,6 +3,7 @@ import TaskList from './components/TaskList';
 import AddTask from './components/AddTask';
 import useTaskStore from './store/taskStore';
 import parchmentTexture from './assets/resources/parchment4.jpeg';
+import coinIcon from './assets/resources/coin.png';
 
 /**
  * The main App component that renders the Daily Task Organizer.
@@ -14,6 +15,7 @@ const App = () => {
   const toggleTaskCompletion = useTaskStore((state) => state.toggleTaskCompletion);
   const deleteTask = useTaskStore((state) => state.deleteTask);
   const clearTasks = useTaskStore((state) => state.clearTasks);
+  const coins = useTaskStore((state) => state.coins);
   
   // // Clear the tasks from the store
   // const currentState = useTaskStore.getState();
@@ -36,6 +38,11 @@ const App = () => {
         fontFamily: 'Cinzel, serif'
       }}
     >
+      {/* Coins display */}
+      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', alignItems: 'center' }}>
+        <img src={coinIcon} alt="coins" style={{ width: '52px', marginRight: '5px' }} />
+        <span style={{ color: '#fff', fontSize: '1.25rem' }}>{coins}</span>
+      </div>
       <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center' }}>Daily Quest Log</h1>
       {/* Component to add a new task */}
       <div className="mb-4" style={{ marginBottom: '1rem', marginTop: '1rem' }}>

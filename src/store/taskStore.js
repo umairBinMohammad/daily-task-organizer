@@ -7,6 +7,7 @@ const useTaskStore = create(
     (set) => ({
       // Initial state: an empty array of quests
       tasks: [],
+      coins: 0,
       
       // Add a new quest to the store
       addTask: (taskData) =>
@@ -25,13 +26,23 @@ const useTaskStore = create(
       
       // Toggle the completion status of a quest
       toggleTaskCompletion: (taskId) =>
-        set((state) => ({
-          tasks: state.tasks.map((task) =>
-            task.id === taskId
-              ? { ...task, completed: !task.completed }
-              : task
-          ),
-        })),
+        set((state) => {
+          const toggledTask = state.tasks.find((task) => task.id === taskId);
+          let newCoins = state.coins;
+          if (toggledTask && !toggledTask.completed) {
+            if (toggledTask.priority === 'Easy') newCoins += 20;
+            else if (toggledTask.priority === 'Medium') newCoins += 50;
+            else if (toggledTask.priority === 'Hard') newCoins += 80;
+          }
+          return {
+            tasks: state.tasks.map((task) =>
+              task.id === taskId
+                ? { ...task, completed: !task.completed }
+                : task
+            ),
+            coins: newCoins,
+          };
+        }),
       
       // Delete a quest from the store
       deleteTask: (taskId) =>
