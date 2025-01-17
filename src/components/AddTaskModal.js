@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AddTaskModal = ({ onAdd, onClose }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [priority, setPriority] = useState('Easy'); // Set default to 'Easy'
+  const [priority, setPriority] = useState('Easy');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +25,7 @@ const AddTaskModal = ({ onAdd, onClose }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        fontFamily: 'Cinzel, serif'
       }}
     >
       <form 
@@ -36,6 +37,7 @@ const AddTaskModal = ({ onAdd, onClose }) => {
           minWidth: '300px',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           boxSizing: 'border-box',
+          fontFamily: 'Cinzel, serif'
         }}
       >
         <h2 style={{ marginBottom: '20px', textAlign: 'center' }}>Add New Quest</h2>

@@ -43,7 +43,7 @@ const useTaskStore = create(
       clearTasks: () => set({ tasks: [] }),
     }),
     {
-      name: 'task-storage', // Name of the key in LocalStorage
+      name: 'task-storage',
     }
   )
 );

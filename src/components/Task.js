@@ -22,8 +22,9 @@ const Task = ({ task, onToggle, onDelete }) => {
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         backgroundColor: '#faf3f7',
-        maxWidth: '300px', // Added to make the task list narrower
-        margin: '0 auto' // Center the component
+        maxWidth: '300px',
+        margin: '0 auto',
+        fontFamily: 'Cinzel, serif'
       }}
     >
       <div style={{ marginRight: '8px' }}>
@@ -38,7 +39,8 @@ const Task = ({ task, onToggle, onDelete }) => {
         onClick={() => onToggle(task.id)}
         style={{
           cursor: 'pointer',
-          flex: 1
+          flex: 1,
+          fontFamily: 'Cinzel, serif'
         }}
       >
         <div style={{ fontWeight: 'bold', textDecoration: task.completed ? 'line-through' : 'none' }}>
