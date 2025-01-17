@@ -2,7 +2,7 @@ import React from 'react';
 import TaskList from './components/TaskList';
 import AddTask from './components/AddTask';
 import useTaskStore from './store/taskStore';
-import parchmentTexture from './assets/resources/parchment3.png';
+import parchmentTexture from './assets/resources/parchment4.jpeg';
 
 /**
  * The main App component that renders the Daily Task Organizer.
