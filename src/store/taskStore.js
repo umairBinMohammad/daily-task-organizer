@@ -8,6 +8,7 @@ const useTaskStore = create(
       // Initial state: an empty array of quests
       tasks: [],
       coins: 0,
+      completedTasks: [],
       
       // Add a new quest to the store
       addTask: (taskData) =>
@@ -26,20 +27,28 @@ const useTaskStore = create(
       
       // Toggle the completion status of a quest
       toggleTaskCompletion: (taskId) =>
+        set((state) => ({
+          tasks: state.tasks.map((task) =>
+            task.id === taskId
+              ? { ...task, completed: !task.completed }
+              : task
+          ),
+        })),
+      
+      // Turn in a quest and award coins
+      turnInTask: (taskId) =>
         set((state) => {
-          const toggledTask = state.tasks.find((task) => task.id === taskId);
+          const turnedInTask = state.tasks.find((task) => task.id === taskId);
+          if (!turnedInTask) return {};
+
           let newCoins = state.coins;
-          if (toggledTask && !toggledTask.completed) {
-            if (toggledTask.priority === 'Easy') newCoins += 20;
-            else if (toggledTask.priority === 'Medium') newCoins += 50;
-            else if (toggledTask.priority === 'Hard') newCoins += 80;
-          }
+          if (turnedInTask.priority === 'Easy') newCoins += 20;
+          else if (turnedInTask.priority === 'Medium') newCoins += 50;
+          else if (turnedInTask.priority === 'Hard') newCoins += 80;
+
           return {
-            tasks: state.tasks.map((task) =>
-              task.id === taskId
-                ? { ...task, completed: !task.completed }
-                : task
-            ),
+            tasks: state.tasks.filter((task) => task.id !== taskId),
+            completedTasks: [...state.completedTasks, { ...turnedInTask, completed: true }],
             coins: newCoins,
           };
         }),

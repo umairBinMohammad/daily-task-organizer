@@ -16,6 +16,8 @@ const App = () => {
   const deleteTask = useTaskStore((state) => state.deleteTask);
   const clearTasks = useTaskStore((state) => state.clearTasks);
   const coins = useTaskStore((state) => state.coins);
+  const completedTasks = useTaskStore((state) => state.completedTasks);
+  const turnInTask = useTaskStore((state) => state.turnInTask);
   
   // // Clear the tasks from the store
   // const currentState = useTaskStore.getState();
@@ -43,7 +45,7 @@ const App = () => {
         <img src={coinIcon} alt="coins" style={{ width: '52px', marginRight: '5px' }} />
         <span style={{ color: '#fff', fontSize: '1.25rem' }}>{coins}</span>
       </div>
-      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center', fontSize: '2.25rem' }}>Daily Quest Log</h1>
+      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center', fontSize: '2.25rem' }}>Active Quests</h1>
       {/* Component to add a new task */}
       <div className="mb-4" style={{ marginBottom: '1rem', marginTop: '1rem' }}>
         <AddTask onAdd={addTask} />
@@ -66,8 +68,10 @@ const App = () => {
       </div>
       {/* Component to list all tasks */}
       <div className="mt-4" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-        <TaskList tasks={tasks} onToggle={toggleTaskCompletion} onDelete={deleteTask} />
+        <TaskList tasks={tasks} onToggle={toggleTaskCompletion} onDelete={deleteTask} onTurnIn={turnInTask} />
       </div>
+      <h2 style={{ textAlign: 'center', marginTop: '2rem' }}>Completed Quests</h2>
+      <TaskList tasks={completedTasks} onToggle={() => {}} onDelete={() => {}} onTurnIn={() => {}} />
     </div>
   );
 };

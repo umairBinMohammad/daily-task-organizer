@@ -1,4 +1,4 @@
-# Daily Task Organizer with Gamification 🎯
+# Daily Quest Tracker
 
 A React.js app to manage daily tasks with a fun twist of gamification! Complete tasks, earn points, track streaks, and reward yourself.
 

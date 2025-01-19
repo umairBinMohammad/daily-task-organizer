@@ -7,8 +7,9 @@ import React from 'react';
  * @param {Object} props.task - The quest object containing id, title, description, priority, and completed status.
  * @param {Function} props.onToggle - Function to toggle the completed status of the quest.
  * @param {Function} props.onDelete - Function to delete the quest.
+ * @param {Function} props.onTurnIn - Function to turn in the quest.
  */
-const Task = ({ task, onToggle, onDelete }) => {
+const Task = ({ task, onToggle, onDelete, onTurnIn }) => {
   return (
     <div
       // Container styles
@@ -59,6 +60,12 @@ const Task = ({ task, onToggle, onDelete }) => {
         style={{ marginLeft: '10px', color: '#ff4d4d', border: 'none', background: 'none', cursor: 'pointer' }}
       >
         Abandon Quest
+      </button>
+      <button 
+        onClick={() => onTurnIn(task.id)}
+        style={{ marginLeft: '10px', color: '#28a745', border: 'none', background: 'none', cursor: 'pointer' }}
+      >
+        Turn in Quest
       </button>
     </div>
   );
