@@ -9,6 +9,14 @@ const AddTask = ({ onAdd }) => {
     const [showModal, setShowModal] = useState(false);
   
     const handleAdd = (taskData) => {
+      if (taskData.title.length > 15) {
+        alert("Title cannot exceed 15 characters");
+        return;
+      }
+      if (taskData.description.length > 30) {
+        alert("Description cannot exceed 30 characters");
+        return;
+      }
       onAdd(taskData);
     };
   
