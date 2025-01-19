@@ -4,9 +4,7 @@ A React.js app to manage daily tasks with a fun twist of gamification! Complete 
 
 ## Features
 - Add, edit, and delete daily tasks.
-- Earn points for completing tasks.
-- Track streaks and visualize progress.
-- Redeem points for small rewards.
+- Earn coins for completing tasks.
 
 ## Setup Instructions
 
