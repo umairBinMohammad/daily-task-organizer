@@ -35,7 +35,7 @@ const App = () => {
         backgroundImage: `url(${parchmentTexture})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        fontFamily: 'Cinzel, serif'
+        fontFamily: 'Macondo, serif'
       }}
     >
       {/* Coins display */}
@@ -43,7 +43,7 @@ const App = () => {
         <img src={coinIcon} alt="coins" style={{ width: '52px', marginRight: '5px' }} />
         <span style={{ color: '#fff', fontSize: '1.25rem' }}>{coins}</span>
       </div>
-      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center', fontSize: '1.75rem' }}>Daily Quest Log</h1>
+      <h1 className="text-xl font-bold text-center mb-4" style={{ textAlign: 'center', fontSize: '2.25rem' }}>Daily Quest Log</h1>
       {/* Component to add a new task */}
       <div className="mb-4" style={{ marginBottom: '1rem', marginTop: '1rem' }}>
         <AddTask onAdd={addTask} />

@@ -14,7 +14,7 @@ const AddTask = ({ onAdd }) => {
   
     return (
         <>
-          <div className="mb-4" style={{ textAlign: 'center', fontFamily: 'Cinzel, serif' }}>
+          <div className="mb-4" style={{ textAlign: 'center', fontFamily: 'Macondo, serif' }}>
             <button
               onClick={() => setShowModal(true)}
               style={{

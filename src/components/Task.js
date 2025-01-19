@@ -24,7 +24,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         backgroundColor: '#faf3f7',
         maxWidth: '300px',
         margin: '0 auto',
-        fontFamily: 'Cinzel, serif'
+        fontFamily: 'Macondo, serif'
       }}
     >
       <div style={{ marginRight: '8px' }}>
@@ -40,7 +40,7 @@ const Task = ({ task, onToggle, onDelete }) => {
         style={{
           cursor: 'pointer',
           flex: 1,
-          fontFamily: 'Cinzel, serif'
+          fontFamily: 'Macondo, serif'
         }}
       >
         <div style={{ fontWeight: 'bold', textDecoration: task.completed ? 'line-through' : 'none' }}>
