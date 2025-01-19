@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/daily-task-organizer/static/css/main.5ae8a9c8.css",
+    "main.js": "/daily-task-organizer/static/js/main.dddd6269.js",
+    "static/js/488.0c9c2158.chunk.js": "/daily-task-organizer/static/js/488.0c9c2158.chunk.js",
+    "static/media/parchment4.jpeg": "/daily-task-organizer/static/media/parchment4.4efa20db96a14d1f31e9.jpeg",
+    "static/media/coin.png": "/daily-task-organizer/static/media/coin.242ade574eb80f01dc05.png",
+    "index.html": "/daily-task-organizer/index.html",
+    "main.5ae8a9c8.css.map": "/daily-task-organizer/static/css/main.5ae8a9c8.css.map",
+    "main.dddd6269.js.map": "/daily-task-organizer/static/js/main.dddd6269.js.map",
+    "488.0c9c2158.chunk.js.map": "/daily-task-organizer/static/js/488.0c9c2158.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ae8a9c8.css",
+    "static/js/main.dddd6269.js"
+  ]
+}
