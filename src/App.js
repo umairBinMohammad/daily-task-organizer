@@ -29,7 +29,7 @@ const App = () => {
         maxWidth: '65%',
         margin: '0 auto',
         padding: '2% 5% 5% 5%',
-        borderRadius: '0.5rem',
+        borderRadius: '5rem',
         boxShadow: '0 0.125rem 0.25rem rgba(0, 0, 0, 0.1)',
         backgroundColor: '#fff',
         backgroundImage: `url(${parchmentTexture})`,
