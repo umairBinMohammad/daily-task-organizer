@@ -18,6 +18,7 @@ const App = () => {
   const coins = useTaskStore((state) => state.coins);
   const completedTasks = useTaskStore((state) => state.completedTasks);
   const turnInTask = useTaskStore((state) => state.turnInTask);
+  const clearCompletedTasks = useTaskStore((state) => state.clearCompletedTasks);
   
   // // Clear the tasks from the store
   // const currentState = useTaskStore.getState();
@@ -41,7 +42,7 @@ const App = () => {
       }}
     >
       {/* Coins display */}
-      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', alignItems: 'center' }}>
+      <div style={{ position: 'absolute', top: '30px', right: '30px', display: 'flex', alignItems: 'center' }}>
         <img src={coinIcon} alt="coins" style={{ width: '52px', marginRight: '5px' }} />
         <span style={{ color: '#fff', fontSize: '1.25rem' }}>{coins}</span>
       </div>
@@ -71,6 +72,21 @@ const App = () => {
         <TaskList tasks={tasks} onToggle={toggleTaskCompletion} onDelete={deleteTask} onTurnIn={turnInTask} />
       </div>
       <h2 style={{ textAlign: 'center', marginTop: '2rem' }}>Completed Quests</h2>
+      <div className="mb-4" style={{ textAlign: 'center' }}>
+        <button
+          onClick={clearCompletedTasks}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#ff4d4d',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+          }}
+        >
+          Clear Archived Quests
+        </button>
+      </div>
       <TaskList tasks={completedTasks} onToggle={() => {}} onDelete={() => {}} onTurnIn={() => {}} />
     </div>
   );

@@ -61,6 +61,9 @@ const useTaskStore = create(
       
       // Clear all quests from the store
       clearTasks: () => set({ tasks: [] }),
+
+      // Clear all completed tasks from the store
+      clearCompletedTasks: () => set({ completedTasks: [] }),
     }),
     {
       name: 'task-storage',
