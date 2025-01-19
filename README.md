@@ -12,5 +12,5 @@ A React.js app to manage daily tasks with a fun twist of gamification! Complete 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/daily-task-organizer.git
+   git clone https://github.com/umairBinMohammad/daily-task-organizer.git
    cd daily-task-organizer
