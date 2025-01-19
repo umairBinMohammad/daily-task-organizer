@@ -8,6 +8,8 @@ import Task from './Task';
  * @param {Function} onToggle - Function to toggle the completion status of a quest.
  * @param {Function} onDelete - Function to delete a quest.
  * @param {Function} onTurnIn - Function to turn in a quest.
+ * 
+ * Time complexity: O(n)
  */
 const TaskList = ({ tasks, onToggle, onDelete, onTurnIn }) => {
     return (

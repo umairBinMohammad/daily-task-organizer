@@ -8,6 +8,8 @@ import React from 'react';
  * @param {Function} props.onToggle - Function to toggle the completed status of the quest.
  * @param {Function} props.onDelete - Function to delete the quest.
  * @param {Function} props.onTurnIn - Function to turn in the quest.
+ * 
+ * Time complexity: O(1)
  */
 const Task = ({ task, onToggle, onDelete, onTurnIn }) => {
   return (

@@ -4,6 +4,8 @@ import AddTaskModal from './AddTaskModal';
 /**
  * AddTask component allows the user to add a new task.
  * @param {function} onAdd - Function to call when a new task is added.
+ * 
+ * Time complexity: O(1)
  */
 const AddTask = ({ onAdd }) => {
     const [showModal, setShowModal] = useState(false);

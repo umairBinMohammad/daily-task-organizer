@@ -8,6 +8,8 @@ import coinIcon from './assets/resources/coin.png';
 /**
  * The main App component that renders the Daily Task Organizer.
  * It uses the task store to manage tasks and passes necessary props to child components.
+ * 
+ * Time complexity: O(n)
  */
 const App = () => {
   const tasks = useTaskStore((state) => state.tasks);

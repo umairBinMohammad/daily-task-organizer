@@ -125,4 +125,10 @@ const AddTaskModal = ({ onAdd, onClose }) => {
   );
 };
 
+/**
+ * Time Complexity Analysis:
+ * The rendering of the AddTaskModal component has a time complexity of O(1) as it does not depend on the size of any input.
+ * The component's state updates and event handlers are also O(1) operations.
+ */
+
 export default AddTaskModal;

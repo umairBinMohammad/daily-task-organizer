@@ -11,6 +11,7 @@ const useTaskStore = create(
       completedTasks: [],
       
       // Add a new quest to the store
+      // Time complexity: O(1)
       addTask: (taskData) =>
         set((state) => ({
           tasks: [
@@ -26,6 +27,7 @@ const useTaskStore = create(
         })),
       
       // Toggle the completion status of a quest
+      // Time complexity: O(n)
       toggleTaskCompletion: (taskId) =>
         set((state) => ({
           tasks: state.tasks.map((task) =>
@@ -36,6 +38,7 @@ const useTaskStore = create(
         })),
       
       // Turn in a quest and award coins
+      // Time complexity: O(n)
       turnInTask: (taskId) =>
         set((state) => {
           const turnedInTask = state.tasks.find((task) => task.id === taskId);
@@ -54,15 +57,18 @@ const useTaskStore = create(
         }),
       
       // Delete a quest from the store
+      // Time complexity: O(n)
       deleteTask: (taskId) =>
         set((state) => ({
           tasks: state.tasks.filter((task) => task.id !== taskId),
         })),
       
       // Clear all quests from the store
+      // Time complexity: O(1)
       clearTasks: () => set({ tasks: [] }),
 
       // Clear all completed tasks from the store
+      // Time complexity: O(1)
       clearCompletedTasks: () => set({ completedTasks: [] }),
     }),
     {
